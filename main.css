@@ -1,0 +1,64 @@
+/* for all elements (box) having border lines */
+.border-box {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/border */
+    /* identital to `border: 2px solid;` */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-width */
+    border-width: 2px;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-style */
+    border-style: solid;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/margin */
+    margin: 10px;
+    height: 200px;
+}
+
+/* align text center horizontally and vertically */
+.center-aligned-text {
+    /* https://developer.mozilla.org/ko/docs/Web/CSS/display */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout */
+    display: flex;
+    /* vertically centered */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/align-items */
+    align-items: center;
+    /* horioztally centered */
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content */
+    justify-content: center;
+}
+
+/* a invisible element for two children elements */
+.flex-container {
+    /* use `flex` to align inner items horizontally */
+    display: flex;
+}
+
+/* select all elements, descendants of `.flex-container` */
+.flex-container .flex-item {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+    /* flex: flex-grow flex-shrink flex basis */
+    /* identical to `flex: 1 1 auto` */
+    flex: auto
+}
+
+/* a visible container element having a centered aligned element */
+.outer-box {
+    /* override height of `.border-box` */
+    height: 300px;
+    /* to align inner box centered aligned */
+    display: flex;
+    /* vertically centered */
+    align-items: center;
+    /* horizontally centered */
+    justify-content: center;
+}
+
+/* select all elements, descendants of `.outer-box` */
+.outer-box .inner-box {
+    width: 200px;
+    height: 100px;
+    background-color: gray;
+}
+
+.formatted-text {
+    font-style: italic;
+    font-size: 15px;
+    color: aqua;
+}
