@@ -10,11 +10,8 @@ for inline-level elements.
 Used to style all block-level elements having `<div>` tag.
 ### `.center-aligned-text`
 Used to align content/text horizontally and vertically centered.
-### `.flex-container`
-Used to align child elements horizontally.
-### `.flex-item`
-Descendant of `.flex-container`. Used for all elements to occupy the space
-equally.
+### `.inline-block-item`
+Used for all elements to occupy the space equally/horizontally side by side.
 ### `.outer-box`
 Used to align child elements horizontally and vertically centered.
 ### `.inner-box`

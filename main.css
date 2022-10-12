@@ -8,46 +8,47 @@
     border-style: solid;
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/margin */
     margin: 10px;
-    height: 200px;
+    padding: 10px;
+    height: 100px;
 }
 
 /* align text center horizontally and vertically */
 .center-aligned-text {
-    /* https://developer.mozilla.org/ko/docs/Web/CSS/display */
-    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout */
-    display: flex;
-    /* vertically centered */
-    /* https://developer.mozilla.org/en-US/docs/Web/CSS/align-items */
-    align-items: center;
-    /* horioztally centered */
-    /* https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content */
-    justify-content: center;
+    /* to align horizontally centered */
+    text-align: center;
+    /*
+     * to align vertically centered, let it have the same px to height of
+     * `.border-box` which is applied commonly to all box elements.
+     */
+    line-height: 100px;
 }
 
-/* a invisible element for two children elements */
-.flex-container {
-    /* use `flex` to align inner items horizontally */
-    display: flex;
-}
-
-/* select all elements, descendants of `.flex-container` */
-.flex-container .flex-item {
-    /* https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
-    /* flex: flex-grow flex-shrink flex basis */
-    /* identical to `flex: 1 1 auto` */
-    flex: auto
+/* horizontally aligned two elements */
+.inline-block-item {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/display-legacy */
+    /* https://www.w3schools.com/css/css_inline-block.asp */
+    /*
+     * compared to inline, width/height is allowed.
+     * compared to block, line-break is not added after the element.
+     */
+    display: inline-block;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+    box-sizing: border-box;
+    /*
+     * 22px comes from `.border-box`'s margin+padding+border-width.
+     * 22px has a display problem that the boxes are not placed side by side,
+     * instead vertically.
+     */
+    width: calc(50% - 23px);
 }
 
 /* a visible container element having a centered aligned element */
 .outer-box {
     /* override height of `.border-box` */
     height: 300px;
-    /* to align inner box centered aligned */
-    display: flex;
-    /* vertically centered */
-    align-items: center;
-    /* horizontally centered */
-    justify-content: center;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/position */
+    /* to be positional parent of inner box */
+    position: relative;
 }
 
 /* select all elements, descendants of `.outer-box` */
@@ -55,6 +56,18 @@
     width: 200px;
     height: 100px;
     background-color: gray;
+
+    /*
+     * to place center horizontally and vertically. `position: relative` is a
+     * must in parent element.
+     */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /* end of position related attributes. */
 }
 
 .formatted-text {
