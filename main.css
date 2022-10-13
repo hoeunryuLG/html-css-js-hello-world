@@ -1,11 +1,13 @@
 /* for all elements (box) having border lines */
 .border-box {
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/border */
-    /* identital to `border: 2px solid;` */
+    /* identital to `border: 2px solid black;` */
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-width */
     border-width: 2px;
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-style */
     border-style: solid;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-color */
+    border-color: black;
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/margin */
     margin: 10px;
     padding: 10px;
@@ -42,6 +44,16 @@
     width: calc(50% - 23px);
 }
 
+.text-overflow-hidden {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/overflow */
+    overflow: hidden;
+}
+
+.text-overflow-scroll {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/overflow */
+    overflow: auto;
+}
+
 /* a visible container element having a centered aligned element */
 .outer-box {
     /* override height of `.border-box` */
@@ -68,6 +80,19 @@
     bottom: 0;
     margin: auto;
     /* end of position related attributes. */
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#user_action_pseudo-classes */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:hover */
+.outer-box .inner-box:hover {
+    background-color: red;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:active */
+.outer-box .inner-box:active {
+    background-color: blue;
 }
 
 .formatted-text {

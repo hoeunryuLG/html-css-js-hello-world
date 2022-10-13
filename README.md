@@ -18,3 +18,18 @@ Used to align child elements horizontally and vertically centered.
 Descendant of `.outer-box`. Used for the element to have its own style.
 ### `.formatted-text`
 Used to style text.
+
+## Using DOM manipulation API
+* two boxes side by side
+    * one, add overflowed multiline text in the box and cut the test overflowed
+    * the other one, add overflowed multiline text in the box and show vertical
+      scroll bar
+* two boxes overlapped
+    * change color when mouse is moved into the inner most box
+    * when clicking the inner box
+        * change color
+        * show alert message - the following order
+            1. it's outer box
+            2. it's inner box
+            3. it's outer box
+        * change the text content
